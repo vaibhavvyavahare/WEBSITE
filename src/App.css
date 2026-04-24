@@ -1,0 +1,446 @@
+.container {
+  overflow-x: hidden;
+  position: relative;
+  background-color: var(--bg-main);
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.5rem;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.logo-icon {
+  color: var(--primary);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.nav-links a {
+  font-weight: 500;
+  color: var(--text-dim);
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: var(--primary);
+}
+
+/* Hero Section */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 150px;
+  gap: 40px;
+}
+
+.hero-content h1 {
+  font-size: 4rem;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  max-width: 800px;
+  color: var(--text-main);
+}
+
+.hero-content p {
+  font-size: 1.25rem;
+  color: var(--text-dim);
+  max-width: 600px;
+  margin-bottom: 3rem;
+}
+
+.hero-btns {
+  display: flex;
+  gap: 20px;
+}
+
+.btn-secondary {
+  padding: 0.8rem 2rem;
+  border-radius: 8px;
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text-main);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-secondary:hover {
+  background: var(--bg-offset);
+  border-color: var(--secondary);
+}
+
+.hero-visual {
+  position: relative;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  min-height: 400px;
+}
+
+.floating-card {
+  position: absolute;
+  padding: 2.5rem;
+  width: 250px;
+  text-align: center;
+  animation: float 6s ease-in-out infinite;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+.floating-card.alt {
+  animation-delay: -3s;
+  top: 150px;
+  right: 0;
+}
+
+.floating-icon {
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+/* Sections */
+.header-box {
+  text-align: left;
+  margin-bottom: 4rem;
+}
+
+.badge {
+  display: inline-block;
+  padding: 6px 16px;
+  background: #eff6ff;
+  color: var(--primary);
+  border: 1px solid #dbeafe;
+  border-radius: 50px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Grids */
+.problem-grid,
+.objectives-grid,
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.problem-card,
+.obj-card,
+.team-card {
+  padding: 3rem 2rem;
+  text-align: center;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card-icon {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 1.5rem;
+}
+
+.warning {
+  color: #f59e0b;
+}
+
+.danger {
+  color: #ef4444;
+}
+
+.icon-wrapper {
+  width: 60px;
+  height: 60px;
+  background: #eff6ff;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  color: var(--primary);
+}
+
+/* Benefits Section */
+.benefits-section {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  margin: 50px 0;
+}
+
+.benefits-content {
+  flex: 2;
+}
+
+.benefits-list {
+  list-style: none;
+  margin-top: 2rem;
+}
+
+.benefits-list li {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  color: var(--text-dim);
+}
+
+.benefits-stats {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.stat-item {
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  text-align: center;
+}
+
+.stat-item h4 {
+  font-size: 2.5rem;
+  color: var(--primary);
+}
+
+/* Team Card */
+.avatar {
+  width: 80px;
+  height: 80px;
+  background: var(--bg-offset);
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.roll {
+  color: var(--text-dim);
+  font-size: 0.9rem;
+  margin: 0.5rem 0 1.5rem;
+}
+
+.team-socials {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  color: var(--text-dim);
+}
+
+/* Cyber Laws Section */
+.laws-section {
+  padding: 100px 5%;
+}
+
+.section-desc {
+  color: var(--text-dim);
+  max-width: 600px;
+  margin: 1rem auto 3rem;
+}
+
+.laws-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.law-card {
+  padding: 2rem;
+  text-align: left;
+}
+
+.law-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 1rem;
+}
+
+.law-icon {
+  color: var(--primary);
+}
+
+.law-card h3 {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--primary);
+  margin: 0;
+}
+
+.law-card h4 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: var(--text-main);
+}
+
+.law-card p {
+  font-size: 0.9rem;
+  color: var(--text-dim);
+  line-height: 1.5;
+}
+
+/* Resources Section */
+.resources-section {
+  background-color: var(--bg-offset);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 80px 5%;
+}
+
+.resources-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.resource-card {
+  padding: 2.5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.res-icon {
+  width: 40px;
+  height: 40px;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+.resource-card h3 {
+  font-size: 1.5rem;
+  color: var(--text-main);
+}
+
+.resource-card p {
+  color: var(--text-dim);
+  font-size: 0.95rem;
+}
+
+.res-info {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+  width: 100%;
+}
+
+.res-val {
+  display: block;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.res-sub {
+  font-size: 0.85rem;
+  color: var(--text-dim);
+}
+
+/* Footer */
+.footer {
+  padding: 50px 5%;
+  border-top: 1px solid var(--border);
+  margin-top: 100px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.f-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.f-links {
+  display: flex;
+  gap: 30px;
+  color: var(--text-dim);
+}
+
+/* Animations */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@media (max-width: 1024px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-content h1 {
+    font-size: 3rem;
+  }
+
+  .hero-btns {
+    justify-content: center;
+  }
+
+  .hero-visual {
+    display: none;
+  }
+
+  .benefits-section {
+    flex-direction: column;
+  }
+}
