@@ -19,6 +19,7 @@ import {
   Scale
 } from 'lucide-react';
 import './App.css';
+import Quiz from './Quiz';
 
 const App = () => {
   const team = [
@@ -63,6 +64,7 @@ const App = () => {
           <a href="#about">Our Mission</a>
           <a href="#objectives">Objectives</a>
           <a href="#team">Our Team</a>
+          <a href="#quiz">Quiz</a>
           <button className="btn-primary">Join Us</button>
         </div>
       </nav>
@@ -249,6 +251,9 @@ const App = () => {
           </motion.div>
         </div>
       </section>
+
+      {/* Quiz Section */}
+      <Quiz />
 
       {/* Resources / Contact Section */}
       <section id="resources" className="resources-section">
