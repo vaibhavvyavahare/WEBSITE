@@ -127,12 +127,10 @@ const Quiz = () => {
                 }
                 
                 return (
-                  <motion.button
+                  <button
                     key={index}
                     className={optionClass}
                     onClick={() => handleOptionClick(index)}
-                    whileHover={!isAnswered ? { scale: 1.02 } : {}}
-                    whileTap={!isAnswered ? { scale: 0.98 } : {}}
                     disabled={isAnswered}
                   >
                     <span className="option-text">{option}</span>
@@ -142,7 +140,7 @@ const Quiz = () => {
                     {isAnswered && index === selectedOption && index !== questions[currentQuestion].correctAnswer && (
                       <XCircle className="option-icon incorrect-icon" size={20} />
                     )}
-                  </motion.button>
+                  </button>
                 );
               })}
             </div>
